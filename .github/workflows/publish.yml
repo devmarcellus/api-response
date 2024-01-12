@@ -25,6 +25,7 @@ jobs:
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
+      - run: echo /home/runner/work/_temp/.npmrc
         with:
           publish: pnpm run release
         env:
