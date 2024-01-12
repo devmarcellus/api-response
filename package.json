@@ -1,0 +1,29 @@
+{
+  "name": "@devmarcellus/api-response",
+  "description": "API Error Response",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devmarcellus/api-response.git"
+  },
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "test": "jest --",
+    "test:coverage": "jest --collectCoverage --",
+    "lint": "eslint \"{src,lib,test}/**/*.ts\" --fix",
+    "format": "prettier --write \"lib/**/*.ts\" \"test/**/*.ts\"",
+    "release": "pnpm run build && changeset publish"
+  },
+  "author": "Mondly Marcellus <mondly25@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1"
+  }
+}
